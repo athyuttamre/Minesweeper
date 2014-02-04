@@ -125,6 +125,7 @@ $(document).ready(function() {
 			for (var j = 0; j < columns; j++) {
 				if (grid[i][j].isMine === true) {
 					$("#r" + i + "c" + j).addClass("clicked-mine");
+					$("#r" + i + "c" + j).removeClass("unclicked");
 				}
 			}
 		}
