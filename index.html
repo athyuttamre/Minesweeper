@@ -10,7 +10,17 @@
     <div id="wrapper">
       <h1>Minesweeper</h1>
       <h2>Classic Minesweeper built in Javascript (using Jade, Stylus and jQuery)</h2>
+      <form id="grid-specifications">
+        <label for="level">Level: </label>
+        <select id="level">
+          <option value="beginner" selected="selected">Beginner - 9x9 - 10 Mines</option>
+          <option value="intermediate">Intermediate - 16x16 - 40 Mines</option>
+          <option value="expert">Expert - 30x16 - 99 Mines</option>
+        </select>
+        <input type="submit" value="New Game">
+      </form>
       <div id="grid"></div>
+      <button id="reset">Reset</button>
     </div>
   </body>
 </html>

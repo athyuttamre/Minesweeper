@@ -9,4 +9,12 @@ html(lang="en")
         #wrapper
             h1 Minesweeper
             h2 Classic Minesweeper built in Javascript (using Jade, Stylus and jQuery)
+            form(id='grid-specifications')
+                label(for='level') Level: 
+                select(id='level')
+                    option(value='beginner' selected='selected') Beginner - 9x9 - 10 Mines
+                    option(value='intermediate') Intermediate - 16x16 - 40 Mines
+                    option(value='expert') Expert - 30x16 - 99 Mines
+                input(type='submit' value='New Game')
             #grid
+            button(id='reset') Reset

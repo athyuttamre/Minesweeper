@@ -1,9 +1,23 @@
 $(document).ready(function() {
-	var rows = 9;
-	var columns = 9;
+	$('#grid-specifications').submit(function() {
+		var levelSelection = $('#level').val();
+		console.log("Minesweeper started.")
+		console.log("Level: " + levelSelection);
+		if (levelSelection = "beginner") {
+			startGame(9, 9, 10);
+		}
+		else if (levelSelection = "intermediate") {
+			startGame(16, 16, 40);
+		}
+		else if (levelSelection = "expert") {
+			startGame(30, 16, 99);
+		}
+	});
+});
+
+function startGame(rows, columns, mines) {
 	var blocks = (rows * columns);
 	var clicked = 0;
-	var mines = 10;
 	
 	// Setting Grid Arrays
 	var grid = [];
@@ -130,4 +144,4 @@ $(document).ready(function() {
 			}
 		}
 	}
-});
+}
